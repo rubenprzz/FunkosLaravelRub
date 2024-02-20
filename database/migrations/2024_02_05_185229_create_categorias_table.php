@@ -11,8 +11,9 @@ return new class extends Migration
     {
         Schema::create('categorias', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre').required().unique();
-            $table->string('descripcion').required();
+            $table->string('nombre');
+            $table->string('descripcion');
+            $table-> boolean('isDeleted');
             $table->timestamps();
         });
     }

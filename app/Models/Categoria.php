@@ -10,4 +10,9 @@ class Categoria extends Model
     protected $fillable =['nombre', 'descripcion'];
 
     use HasFactory;
+    public function funko()
+    {
+        return $this->hasMany(Funko::class);
+
+    }
 }
