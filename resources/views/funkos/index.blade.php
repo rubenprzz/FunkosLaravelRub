@@ -37,15 +37,7 @@
                     <td>{{ $funko->modelo }}</td>
                     <td>{{ $funko->precio }}</td>
                     <td>{{ $funko->cantidad }}</td>
-                    <td>
-                        @if($funko->imagen != Funko::$IMAGE_DEFAULT)
-                            <img alt="Imagen del funko" height="50" src="{{ asset('storage/' . $funko->imagen) }}"
-                                 width="50">
-                        @else
-                            <img alt="Imagen por defecto" height="50" src="{{ Funko::$IMAGE_DEFAULT }}"
-                                 width="50">
-                        @endif
-                    </td>
+
                     <td>
                         <a class="btn btn-primary btn-sm"
                            href="{{ route('funkos.show', $funko->id) }}">Detalles</a>

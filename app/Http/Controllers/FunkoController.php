@@ -11,7 +11,8 @@ class FunkoController extends Controller
 {
     public function index()
     {
-        return $funkos= Funko::all();
+        $funkos= Funko::all();
+        return view('funkos.index')->with('funkos',$funkos);
 
     }
     public function store(Request $request)
