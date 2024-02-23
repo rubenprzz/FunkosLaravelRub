@@ -11,7 +11,7 @@ class FunkoController extends Controller
 {
     public function index()
     {
-        $funkos= Funko::all();
+        $funkos= Funko::paginate(10);
         return view('funkos.index')->with('funkos',$funkos);
 
     }

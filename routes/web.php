@@ -14,9 +14,9 @@ Route::get('/categorias/{categorias}', [CategoriaController::class, 'show']);
 Route::put('/categorias/{categorias}', [CategoriaController::class, 'update']);
 Route::delete('/categorias/{categorias}', [CategoriaController::class, 'destroy']);
 Route::get('/funkos', [FunkoController::class, 'index'])->name('funkos.index');
-Route::post('/funkos', [FunkoController::class, 'store']);
-Route::get('/funkos/{funkos}', [FunkoController::class, 'show']);
-Route::put('/funkos/{funkos}', [FunkoController::class, 'update']);
-Route::delete('/funkos/{funkos}', [FunkoController::class, 'destroy']);
+Route::post('/funkos', [FunkoController::class, 'store'])->name('funkos.create');
+Route::get('/funkos/{funko}', [FunkoController::class, 'show'])->name('funkos.show');
+Route::put('/funkos/{funkos}', [FunkoController::class, 'edit'])->name('funkos.edit');
+Route::delete('/funkos/{funkos}', [FunkoController::class, 'destroy'])->name('funkos.destroy');
 
 

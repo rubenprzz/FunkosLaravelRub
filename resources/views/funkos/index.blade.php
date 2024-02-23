@@ -43,8 +43,7 @@
                            href="{{ route('funkos.show', $funko->id) }}">Detalles</a>
                         <a class="btn btn-secondary btn-sm"
                            href="{{ route('funkos.edit', $funko->id) }}">Editar</a>
-                        <a class="btn btn-info  btn-sm"
-                           href="{{ route('funkos.editImage', $funko->id) }}">Imagen</a>
+
                         <form action="{{ route('funkos.destroy', $funko->id) }}" method="POST"
                               style="display: inline;">
                             @csrf
